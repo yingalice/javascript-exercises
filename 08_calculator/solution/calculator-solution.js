@@ -11,9 +11,7 @@ const sum = function (array) {
 };
 
 const multiply = function (array) {
-  return array.length
-    ? array.reduce((accumulator, nextItem) => accumulator * nextItem)
-    : 0;
+  return array.reduce((product, current) => product * current)
 };
 
 const power = function (a, b) {
@@ -27,15 +25,6 @@ const factorial = function (n) {
     product *= i;
   }
   return product;
-};
-
-// This is another implementation of Factorial that uses recursion
-// THANKS to @ThirtyThreeB!
-const recursiveFactorial = function (n) {
-  if (n === 0) {
-    return 1;
-  }
-  return n * recursiveFactorial(n - 1);
 };
 
 module.exports = {
